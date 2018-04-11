@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/team_scores_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/Player1"
+                android:textColor="#EC407A"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/overwatch_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/Player1Score"
+                android:textColor="#FFEB3B"
+                android:textSize="56sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:onClick="knockout"
+                android:text="Knockout (+3)"
+                android:textColor="#FAFAFA" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:onClick="assist"
+                android:text="Assist (+2)"
+                android:textColor="#FAFAFA" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:onClick="breach"
+                android:text="Breach \n(-1 Talon)"
+                android:textColor="#FAFAFA" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/Player2"
+                android:textColor="#EC407A"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/talon_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/Player2Score"
+                android:textColor="#FFEB3B"
+                android:textSize="56sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:onClick="knockoutTalon"
+                android:text="Knockout (+3)"
+                android:textColor="#FAFAFA" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:onClick="assistTalon"
+                android:text="Assist (+2)"
+                android:textColor="#FAFAFA" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:onClick="breachTalon"
+                android:text="Breach \n(-1 Overwatch)"
+                android:textColor="#FAFAFA" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/reset_button_view"
+        android:layout_below="@+id/team_scores_view"
+        android:src="@drawable/overwatch" />
+
+    <Button
+        android:id="@+id/reset_button_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="resetScore"
+        android:text="Reset/Game Over"
+        android:textColor="#FAFAFA" />
+
+</RelativeLayout>

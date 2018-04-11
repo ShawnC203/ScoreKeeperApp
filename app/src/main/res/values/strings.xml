@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Score Keeper App</string>
+    <string name="Player1">Overwatch</string>
+    <string name="Player1Score">0</string>
+    <string name="Player2">Talon</string>
+    <string name="Player2Score">0</string>
+</resources>
